@@ -1,0 +1,36 @@
+USE [test]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_GetLayout_Details]    Script Date: 3/4/2024 4:53:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[usp_GetLayout_Details]
+as
+begin
+select * from Layouts
+end
+GO
+/****** Object:  StoredProcedure [dbo].[usp_GetLayout_Item_Details]    Script Date: 3/4/2024 4:53:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[usp_GetLayout_Item_Details](@layoutId int=0)
+as
+begin
+select * from LayoutItems where layoutId=@layoutId or @layoutId=0
+end
+GO
+/****** Object:  StoredProcedure [dbo].[usp_GetLayout_Item_Index_Details]    Script Date: 3/4/2024 4:53:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[usp_GetLayout_Item_Index_Details]
+as  
+begin  
+select * from LayoutItems 
+  
+end  
+GO
